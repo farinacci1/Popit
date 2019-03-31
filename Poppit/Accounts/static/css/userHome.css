@@ -1,0 +1,305 @@
+html,body{
+  height: 100%;
+  background-color: 	#F5F5F5;
+  min-width: 350px !important;
+  overflow: auto;
+  z-index: -1;
+}
+
+.header_row{
+  position: relative;
+  background-color: black;
+  height: 50px;
+  width: 100%;
+}
+.header_content{
+  position: absolute;
+  min-width: 750px;
+  width:65%;
+  height: 100%;
+  left:50%;
+  *display: inline !important;
+  text-align: center;
+  z-index: 1;
+  transform: translateX(-50%);
+}
+.header_content_left{
+  float: left;
+  height:100%;
+  display: flex;
+  background-color: inherit;
+  align-items: center;
+  margin-left: 10px;
+  justify-content: flex-start;
+  text-align: center;
+  box-sizing: border-box;
+
+}
+.header_content_right{
+  box-sizing: border-box;
+  float: right;
+  height:100%;
+  width: 50%;
+  display: flex;
+  background-color: inherit;
+  align-items: center;
+  margin-right: 10px;
+  justify-content: flex-end;
+}
+
+.header_content_left > * {
+  display: inline;
+  margin-right: 10px;
+}
+.header_content_right > * {
+  display: inline;
+  margin-right: 10px;
+}
+.header_content_right > *:last-child, .header_content_left > *:last-child{
+  margin-right: 0px;
+}
+.popIT_logo{
+  color: #D3D3D3;
+  font-size: 16px;
+  font-weight: 300;
+}
+.searchbar{
+border-radius: 15px;
+height: 30px;
+min-width: 200px;
+width: 100%;
+}
+.searchbar:focus {outline:0;}
+.settings{
+  background-color: transparent;
+  border: none;
+  width: 25px;
+  height: 25px;
+  background-image: url(/static/icons/settings_icon.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+.more{
+  background-color: transparent;
+  border: none;
+}
+.settings:focus {outline:0;}
+.settings{
+  position: relative;
+  display: inline-block;
+}
+.settings_dropdown,.more_Dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  right:0;
+  left:auto;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.dropdown_option, .more_Dropdown{
+  background-color: inherit;
+  width: 100%;
+}
+.advertise,.privacy,.logout{
+	width:100%;
+	background-color: inherit;
+  display:inline-block;
+  z-index: 5;
+}
+.settings:hover .settings_dropdown, .more:hover .more_Dropdown {
+  display: block;
+  z-index: 5;
+
+}
+.logo_container, .Home_container, .Notifications_container, .Messages_container{
+  height:100%;
+  display: table;
+}
+.popIT_logo, .Home, .Notifications, .Messages{
+  height: 100%;
+  display:table-cell;
+  vertical-align:middle;
+  box-sizing: border-box;
+}
+.Notifications{
+  background-image: url(/static/icons/notifications_icon.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 20px;
+  -webkit-background-size:  16px 16px;
+  -moz-background-size:  16px 16px;
+  -o-background-size:  16px 16px;
+  background-size:  16px 16px;
+}
+.Home{
+  background-image: url(/static/icons/Home_icon.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 20px;
+  -webkit-background-size:  16px 16px;
+  -moz-background-size:  16px 16px;
+  -o-background-size:  16px 16px;
+  background-size:  16px 16px;
+}
+.Messages{
+  background-image: url(/static/icons/messages_icon.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 20px;
+  -webkit-background-size:  16px 16px;
+  -moz-background-size:  16px 16px;
+  -o-background-size:  16px 16px;
+  background-size:  16px 16px;
+}
+.Home:hover, .Notifications:hover, .Messages:hover {
+  position:relative;
+  text-decoration:none;
+}
+
+
+.user{
+  position: absolute;
+  border-top-color: #C0C0C0;
+  border-top-width: 0.2px;
+  border-top-style: solid;
+  border-bottom-color: #DCDCDC;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  min-width: 750px;
+  width: 60%;
+  height: 225px;
+  margin-top: 10px;
+  left:50%;
+  transform: translateX(-50%);
+
+}
+@media screen and (max-width: 749px) {
+  .user{
+    min-width: 100%;
+    width:100%;
+  }
+  .header_content{
+    min-width: 100%;
+    width:100%;
+  }
+}
+@media screen and (max-width: 739px) {
+  .Communities_container {
+      display: none !important;
+    }
+    .photos_container {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 559px) {
+  .Calendar_container {
+      display: none !important;
+    }
+    .friends_container {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 389px) {
+  .logo_container{
+    display: none !important;
+  }
+}
+.backgroundImage_block{
+  position: absolute;
+  top:0px;
+  height:185px;
+  width: 100%;
+  background-color: #282828;
+}
+.profile_image{
+  position: absolute;
+  width: 200px;
+  height:225px;
+  border-style: groove;
+  background-color: black;
+  border-width: 5px;
+  border-color: white;
+  left: 50%;
+  top:80%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.list{
+  position: absolute;
+  bottom: 0px;
+  height:40px;
+  width: 100%;
+  border-top-color: #C0C0C0;
+  border-top-width: 0.5px;
+  border-top-style: solid;
+  background-color: white;
+  display: inline-block;
+
+}
+.list_left{
+  height:100%;
+  width:calc(50% - 100px - 20px);
+  min-width: calc(50% - 100px - 20px);
+  background-color: inherit;
+  float: left;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.list_right{
+  height:100%;
+  width: calc(50% - 100px - 20px);
+  min-width: calc(50% - 100px - 20px);
+  background-color: inherit;
+  float: right;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+.list_left, .list_right {
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+
+
+.user_logged{
+  border-bottom-style: solid;
+  border-bottom-color: #D3D3D3;
+  border-bottom-width: 0.5px;
+}
+.row{
+  display: table-row;
+}
+
+.about_container, .Communities_container, .Calendar_container, .friends_container,
+.photos_container,.more_container{
+  height:100%;
+  display: table;
+}
+.about, .Communities, .Calendar, .friends,
+.photos,.more{
+  height: 100%;
+  display:table-cell;
+  vertical-align:middle;
+  text-align: center;
+  box-sizing: border-box;
+  min-width: 85px;
+}
+.about:hover, .Communities:hover, .Calendar:hover,
+.friends:hover, .photos:hover, .more:hover{
+  position:relative;
+  text-decoration:none;
+}

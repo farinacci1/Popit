@@ -1,0 +1,26 @@
+{% extends "includes/Index.html" %}
+{% load static%}
+{% block links%}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" media="all">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}" media="all">
+{% endblock links%}
+{% block user%}
+<div id="SigninBlock" >
+    <div id="log_form_group">
+      <div class="content_form">
+        <form method="POST">{% csrf_token %}
+      	  <div class="log_wrapper">
+      	  	<div class="LoginBox"> Login</div>
+      	    <span class="User">
+      	      <input type="text" max_length = "100"  placeholder="Email" name="Email" id="field1" required>
+      	    </span>
+      	    <span class="Pass">
+      	      <input type="password" max_length = "100"  placeholder="Password" name ="password" id="field2" required>
+      	    </span>
+      	     <div class="LogIn_Submit"> <button class="btn" type="submit" id="logInButton">Login</button></div>
+      	  </div>
+      	</form>
+      </div>
+    </div>
+</div>
+{% endblock user%}

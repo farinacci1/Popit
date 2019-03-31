@@ -1,0 +1,29 @@
+{% extends "includes/Index.html" %}
+{% load static%}
+{%block links%}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" media="all">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}" media="all">
+{% endblock links%}
+{% block user%}
+<div class="registerBlock" >
+    <div class="sign_form_group">
+      <div class="content_form_sign">
+        <form method="POST" onkeypress="return event.keyCode != 13;">{% csrf_token %}
+      	  <div class="sign_wrapper">
+      	  	<div class="SigninBox"> Sign Up</div>
+      		    <span class="Email">
+      		      {{ form.email }}
+      		    </span>
+      		    <span class="password">
+      		      {{ form.Pass }}
+      		    </span>
+              <span class="password">
+                {{ form.Pass2 }}
+              </span>
+      		     <div class="signIn_Submit"> <button class="btn" type="submit" id="signUpButton">Register</button></div>
+      	  </div>
+      	</form>
+      </div>
+    </div>
+</div>
+{% endblock user%}

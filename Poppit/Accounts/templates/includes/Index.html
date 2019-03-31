@@ -1,0 +1,45 @@
+{% extends "includes/base.html" %}
+{% load static%}
+{%block links%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" media="all">
+{% endblock links%}
+
+{% block content %}
+<div class="content_header">
+  <div class="content_header_left">
+    <p class="website_title">PopIT</p>
+  </div>
+  <div class="content_header_right">
+    <ul class="header_right">
+      <li><a href="{% url 'Poppit-SignUp' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="{% url 'Poppit-Login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</div>
+<div class="content_body">
+    <div class="container-fluid">
+        <div class="row">
+            <div id="info_block" class=" scrollbar scrollbar-near-moon">
+                <div id="inner_Info_Block" class="force-overflow">
+                  <div class="img_container">
+                    <img src="{% static 'images/david-calderon-973699-unsplash.jpg' %}">
+                    <div class="centered_message">Enjoy</div>
+                  </div>
+                  <div class="img_container">
+                    <img src="{% static 'images/nathan-anderson-443537-unsplash.jpg' %}">
+                    <div class="centered_message">Capture</div>
+                  </div>
+                  <div class="img_container">
+                    <img src="{% static 'images/perry-grone-732606-unsplash.jpg' %}">
+                    <div class="centered_message">Share</div>
+                  </div>
+                </div>
+            </div>
+            {% block user%}{% endblock user%}
+        </div>
+    </div>
+</div>
+<div class="content_footer">
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2019 PopIT</p>
+</div>
+{% endblock content %}
